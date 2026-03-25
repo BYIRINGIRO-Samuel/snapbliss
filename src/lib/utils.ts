@@ -37,22 +37,6 @@ export const multiFormatDateString = (timestamp: string = ""): string => {
   const diffInHours: number = diffInMinutes / 60;
   const diffInDays: number = diffInHours / 24;
 
-  switch (true) {
-    case Math.floor(diffInDays) >= 30:
-      return formatDateString(timestamp);
-    case Math.floor(diffInDays) === 1:
-      return `${Math.floor(diffInDays)} day ago`;
-    case Math.floor(diffInDays) > 1 && diffInDays < 30:
-      return `${Math.floor(diffInDays)} days ago`;
-    case Math.floor(diffInHours) >= 1:
-      return `${Math.floor(diffInHours)} hours ago`;
-    case Math.floor(diffInMinutes) >= 1:
-      return `${Math.floor(diffInMinutes)} minutes ago`;
-    default:
-      return "Just now";
-  }
-};
-
 export const checkIsLiked = (likeList: string[], userId: string) => {
   return likeList.includes(userId);
 };
