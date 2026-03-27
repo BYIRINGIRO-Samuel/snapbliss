@@ -31,12 +31,6 @@ export const multiFormatDateString = (timestamp: string = ""): string => {
   const date: Date = new Date(timestampNum * 1000);
   const now: Date = new Date();
 
-  const diff: number = now.getTime() - date.getTime();
-  const diffInSeconds: number = diff / 1000;
-  const diffInMinutes: number = diffInSeconds / 60;
-  const diffInHours: number = diffInMinutes / 60;
-  const diffInDays: number = diffInHours / 24;
-
 export const checkIsLiked = (likeList: string[], userId: string) => {
   return likeList.includes(userId);
 };
