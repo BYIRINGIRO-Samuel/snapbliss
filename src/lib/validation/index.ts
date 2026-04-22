@@ -23,7 +23,7 @@ export const ProfileValidation = z.object({
   bio: z.string(),
 });
 
-// ============================================================
+
 // POST
 // ============================================================
 export const PostValidation = z.object({
